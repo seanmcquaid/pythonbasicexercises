@@ -155,36 +155,37 @@
 # Tip amount: $20.00 Total amount: $120.00 Amount per person: $24.00
 
 
-total_bill = int(raw_input("How much was your total bill? "))
-level_of_service = raw_input("Level of service? Good, fair or bad? ").lower()
-amount_of_people = int(raw_input("How many ways are you splitting the bill? "))
-total_bill_with_tip = 0
+# total_bill = int(raw_input("How much was your total bill? "))
+# level_of_service = raw_input("Level of service? Good, fair or bad? ").lower()
+# amount_of_people = int(raw_input("How many ways are you splitting the bill? "))
+# total_bill_with_tip = 0
 
-if (level_of_service == "good"):
-    tip_amount = (total_bill * .2)
-    print "Tip amount: " + str(tip_amount)
-    total_bill_with_tip = total_bill + tip_amount
-    print "Total amount with tip: "+ str(total_bill_with_tip)
-elif (level_of_service == "fair"):
-    tip_amount = (total_bill * .15)
-    print "Tip amount: " + str(tip_amount)
-    print "Total amount with tip: "+ str(total_bill_with_tip)
-else:
-    tip_amount = (total_bill * .1)
-    print "Tip amount: " + str(tip_amount)
-    print "Total amount with tip: "+ str(total_bill_with_tip)
+# if (level_of_service == "good"):
+#     tip_amount = (total_bill * .2)
+#     print "Tip amount: " + str(tip_amount)
+#     total_bill_with_tip = total_bill + tip_amount
+#     print "Total amount with tip: "+ str(total_bill_with_tip)
+# elif (level_of_service == "fair"):
+#     tip_amount = (total_bill * .15)
+#     print "Tip amount: " + str(tip_amount)
+#     print "Total amount with tip: "+ str(total_bill_with_tip)
+# else:
+#     tip_amount = (total_bill * .1)
+#     print "Tip amount: " + str(tip_amount)
+#     print "Total amount with tip: "+ str(total_bill_with_tip)
 
-split = (total_bill_with_tip / amount_of_people)
+# split = (total_bill_with_tip / amount_of_people)
 
-print "Amount per person: " + str(split) 
+# print "Amount per person: " + str(split) 
 # 9. 1 to 10
 # Use a while loop to print the numbers from 1 to 10.
 
 # $ python 1_to_10.py 1 2 3 4 5 6 7 8 9 10
 
-i = 0
-while i <= 10:
-    print i 
+# i = 0
+# while i < 10:
+#     i += 1
+#     print i 
 
 
 # 10. How many coins?
@@ -197,3 +198,17 @@ while i <= 10:
 # Do you want another? yes You have 1 coins. 
 # Do you want another? yes You have 2 coins. 
 # Do you want another? no Bye
+
+how_many_coins = int(raw_input("How many coins do you want? "))
+print "You have 0 coins currently"
+coins = 0 
+
+while coins < how_many_coins:
+    answer = raw_input("Do you want another? ").lower()
+    if (answer == "yes"):
+        coins += 1
+        print "You have " + str(coins) + " coins."
+    else:
+        print "BYE!"
+        break
+
