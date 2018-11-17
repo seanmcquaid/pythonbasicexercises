@@ -97,33 +97,91 @@
 #         gameOn = False
 
 # 6. Celsius to Fahrenheit
-# Prompt the user for a number in degrees Celsius, and convert the value to degrees in Fahrenheit and display it to the user. Example session:
+# Prompt the user for a number in degrees Celsius, and convert the value to 
+# degrees in Fahrenheit and display it to the user. Example session:
 
-# $ python degree_conversion.py Temperature in C? 28 82.4 F $ python degree_conversion.py Temperature in C? -5 23 F
+# $ python degree_conversion.py Temperature in C? 28 82.4 F 
+# $ python degree_conversion.py Temperature in C? -5 23 F
+
 # Hint: the formula to convert degrees C to degrees F is: F = C x 1.8 + 32.
+
+# celsius = int(raw_input("What's the temperature out in Celsius?: "))
+# farenheit = (celsius * 1.8) + 32
+
+# print farenheit
 
 # 7. Tip Calculator
 # Prompt the user for two things:
 
 # The total bill amount:
 # The level of service, which can be one of the following: good, fair, or bad
-# Calculate the tip amount and the total amount (bill amount + tip amount). The tip percentage based on the level of service is based on:
+# Calculate the tip amount and the total amount (bill amount + tip amount). 
+# The tip percentage based on the level of service is based on:
 
 # good -> 20%
 # fair -> 15%
 # bad -> 10%
-# Example session: $ python tip_calc.py Total bill amount? 100 Level of service? good Tip amount: $20.00 Total amount: $120.00 $ python tip_calc.py Total bill amount? 48 Level of service? bad Tip amount: $4.80 Total amount: $52.80
+# Example session: $ python tip_calc.py Total bill amount? 100 Level of service? good Tip amount: $20.00 
+# Total amount: $120.00 
+# $ python tip_calc.py Total bill amount? 48 Level of service? bad 
+# Tip amount: $4.80 Total amount: $52.80
+
 # Hints:
-
 # To format a float number as a dollar value, use Python's formatting syntax: "{:.2f}".format(amount)
-# 8. Tip Calculator 2
-# Allow the ability to divide the check into a equal parts amount a number of people. The user will enter the number of people to be divided amongst. Example session:
 
-# $ python tip_calc2.py Total bill amount? 100 Level of service? good Split how many ways? 5 Tip amount: $20.00 Total amount: $120.00 Amount per person: $24.00
+# total_bill = int(raw_input("How much was your total bill? "))
+# level_of_service = raw_input("Level of service? Good, fair or bad? ").lower()
+# total_bill_with_tip = 0
+
+# if (level_of_service == "good"):
+#     tip_amount = (total_bill * .2)
+#     print "Tip amount: " + str(tip_amount)
+#     total_bill_with_tip = total_bill + tip_amount
+#     print "Total amount with tip: "+ str(total_bill_with_tip)
+# elif (level_of_service == "fair"):
+#     tip_amount = (total_bill * .15)
+#     print "Tip amount: " + str(tip_amount)
+#     print "Total amount with tip: "+ str(total_bill_with_tip)
+# else:
+#     tip_amount = (total_bill * .1)
+#     print "Tip amount: " + str(tip_amount)
+#     print "Total amount with tip: "+ str(total_bill_with_tip)
+
+# 8. Tip Calculator 2
+# Allow the ability to divide the check into a equal parts amount a number of people. 
+# The user will enter the number of people to be divided amongst. Example session:
+
+# $ python tip_calc2.py Total bill amount? 100 Level of service? good Split how many ways? 5 
+# Tip amount: $20.00 Total amount: $120.00 Amount per person: $24.00
+
+
+total_bill = int(raw_input("How much was your total bill? "))
+level_of_service = raw_input("Level of service? Good, fair or bad? ").lower()
+amount_of_people = int(raw_input("How many ways are you splitting the bill? "))
+total_bill_with_tip = 0
+
+if (level_of_service == "good"):
+    tip_amount = (total_bill * .2)
+    print "Tip amount: " + str(tip_amount)
+    total_bill_with_tip = total_bill + tip_amount
+    print "Total amount with tip: "+ str(total_bill_with_tip)
+elif (level_of_service == "fair"):
+    tip_amount = (total_bill * .15)
+    print "Tip amount: " + str(tip_amount)
+    print "Total amount with tip: "+ str(total_bill_with_tip)
+else:
+    tip_amount = (total_bill * .1)
+    print "Tip amount: " + str(tip_amount)
+    print "Total amount with tip: "+ str(total_bill_with_tip)
+
+split = (total_bill_with_tip / amount_of_people)
+
+print "Amount per person: " + str(split) 
 # 9. 1 to 10
 # Use a while loop to print the numbers from 1 to 10.
 
 # $ python 1_to_10.py 1 2 3 4 5 6 7 8 9 10
+
 # 10. How many coins?
 # Write a program that will prompt you for how many coins you want. Initially you have no coins. It will ask you if you want a coin? If you type "yes", it will give you one coin, and print out the current tally. If you type no, it will stop the program. Example run:
 
