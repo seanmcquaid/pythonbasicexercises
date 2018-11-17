@@ -5,28 +5,97 @@
 # Upon receiving his name, you will say hello to him. Example session:
 
 # $ python hello.py What is your name? Toby Hello, Toby!
+
+# name = raw_input("What is your name? ")
+
+# print "Hello, %s!" % name
+
 # 2. HELLO, YOU!
-# Same as the first exercise, but this time print the user's name in ALL CAPS, and also tell them the number of letters in their name. Example session:
+# Same as the first exercise, but this time print the user's name in ALL CAPS, 
+# and also tell them the number of letters in their name. Example session:
 
 # $ python hello2.py WHAT IS YOUR NAME? Toby HELLO, TOBY! YOUR NAME HAS 4 LETTERS IN IT! AWESOME!
+
+# name = raw_input("What is your name? ")
+
+# num = len(name)
+
+# print "HELLO, " + name.upper() + "!" + " YOUR NAME HAS %d LETTERS IN IT! AWESOME" %num
+
 # 3. Madlib
-# Prompt the user for the missing words to a Madlib sentence using the input function. You will make up your own Madlib sentence, but here's an example:
+# Prompt the user for the missing words to a Madlib sentence using the input function. 
+# You will make up your own Madlib sentence, but here's an example:
 
 # ____(name)____'s favorite subject in school is ____(subject)____.
 # With the above given sentence, this is what a user session might look like:
 
-# $ python madlib.py Please fill in the blanks below: ____(name)____'s favorite subject in school is ____(subject)____. What is name? Marty What is subject? math Marty's favorite subject in school is math.
+# $ python madlib.py Please fill in the blanks below: ____(name)____'s favorite subject in school is ____(subject)____. 
+# What is name? Marty What is subject? math Marty's favorite subject in school is math.
+
+# print "Please fill in the blanks below: _______'s favorite subject in school is _______."
+
+# name = raw_input("What is your name? ")
+# subject = raw_input("What is your favorite subject? ")
+
+# print name + "'s favorite subject in school is " + subject + "."
+
+
 # 4. Day of the Week
-# Given the following code that prompts the user for a day number (the int function converts a numeric string to a number):
+# Given the following code that prompts the user for a day number 
+# (the int function converts a numeric string to a number):
 
 # day = int(input('Day (0-6)? ')) # Fill in your code here
-# The user will enter a number between 0 to 6 inclusive. Given this number, print a day of the week. 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on. Here's an example user session (this assumes you've named the file day_of_week.py):
+# The user will enter a number between 0 to 6 inclusive. Given this number, print a day of the week. 
+# 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on. Here's an example user session 
+# (this assumes you've named the file day_of_week.py):
 
 # $ python day_of_week.py Day (0-6)? 5 Friday $ python day_of_week.py Day (0-6)? 0 Sunday
+
+# user_num = raw_input("Pick a day between 0-6: ")
+# gameOn = True
+# day = {
+#     "0" : "Sunday",
+#     "1" : "Monday",
+#     "2" : "Tuesday",
+#     "3" : "Wednesday",
+#     "4" : "Thursday",
+#     "5" : "Friday",
+#     "6" : "Saturday"
+# }
+
+# while (gameOn):
+#     if user_num in day:
+#         print day[user_num]
+#         gameOn = False
+
+
 # 5. Work or Sleep In?
-# Prompt the user for a day of the week just like the previous problem. Except this time print "Go to work" if it's a work day and "Sleep in" if it's a weekend day. Example session:
+# Prompt the user for a day of the week just like the previous problem. 
+# Except this time print "Go to work" if it's a work day and "Sleep in" if it's a weekend day. 
+# Example session:
 
 # $ python work_or_sleep_in.py Day (0-6)? 5 Go to work $ python work_or_sleep_in.py Day (0-6)? 6 Sleep in
+
+# user_num = raw_input("Pick a day between 0-6: ")
+# gameOn = True
+# day = {
+#     "0" : "Sunday",
+#     "1" : "Monday",
+#     "2" : "Tuesday",
+#     "3" : "Wednesday",
+#     "4" : "Thursday",
+#     "5" : "Friday",
+#     "6" : "Saturday"
+# }
+
+# while (gameOn):
+#     if (user_num == "6" or user_num == "0"):
+#         print "Sleep In"
+#         gameOn = False
+#     else:
+#         print "GO TO WORK!"
+#         gameOn = False
+
 # 6. Celsius to Fahrenheit
 # Prompt the user for a number in degrees Celsius, and convert the value to degrees in Fahrenheit and display it to the user. Example session:
 
